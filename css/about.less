@@ -1,0 +1,288 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+img {
+  vertical-align: middle;
+}
+span {
+  display: inline-block;
+}
+.animated {
+  -webkit-animation-duration: .5s;
+  animation-duration: .5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.bounceInUp {
+  -webkit-animation-name: bounceInUp;
+  animation-name: bounceInUp;
+}
+.widthExpend {
+  -webkit-animation-name: widthExpend;
+  animation-name: widthExpend;
+}
+.opacityUp {
+  -webkit-animation-name: opacityUp;
+  animation-name: opacityUp;
+}
+// @-webkit-keyframes bounceInUp {
+//   0% {
+//     opacity: 0;
+//     -webkit-transform: translate3d(0, 50px, 0);
+//     transform: translate3d(0, 50px, 0);
+//   }
+//   100% {
+//     opacity: 1;
+//     -webkit-transform: translateZ(0);
+//     transform: translateZ(0);
+//   }
+// }
+@keyframes bounceInUp {
+  0% {
+    opacity: 0;
+    // -webkit-transform: translate3d(0, 50px, 0);
+    // transform: translate3d(0, 50px, 0);
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    // -webkit-transform: translateZ(0);
+    // transform: translateZ(0);
+    transform: translateY(0);
+  }
+}
+@keyframes widthExpend {
+  0% {
+    margin-left: -350px;
+    opacity: 0;
+  }
+  100% {
+    margin-left: 0;
+    opacity: 1;
+  }
+}
+@keyframes opacityUp {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    margin-left: 0;
+    opacity: 1;
+  }
+}
+
+
+// out box
+.container {
+  max-width: 1920px;
+  margin: 0 auto;
+  .banner {
+    background: url(../images/banner.jpg) no-repeat center top;
+    height: 400px;
+  }
+  // color-bg 占位
+  .color-bg {
+    height: 800px;
+    background-color: antiquewhite;
+    .num-box {
+      padding-top: 400px;
+      display: flex;
+      width: 700px;
+      justify-content: space-between;
+      .single {
+        text-align: center;
+        width: 33%;
+        .count{
+          font-size: 16px;
+          color: #2D71B9;
+          span {
+            display: inline-block;
+            font-size: 46px;
+            font-weight: bold;
+          }
+        }
+        >p:first-of-type{
+          color: #313131;
+          font-size: 14px;
+          font-weight: 600;
+          margin-top: 10px;
+          margin-bottom: 24px;
+        }
+        >p:nth-of-type(2) {
+          font-weight: 400;
+          color: #313131;
+          line-height: 18px;
+          font-size: 12px;
+          opacity: .85;
+        }
+      }
+      .single:nth-of-type(2) {
+        border-left: 1px solid #D8D8D8;
+        border-right: 1px solid #D8D8D8;
+        padding: 0 30px;
+      }
+    }
+  }
+
+  // advantage
+  .advantage {
+    .advantage-bg {
+      background: url(../images/advantage_bg.jpg) no-repeat center top;
+      height: 419px;
+    }
+    .advantage-content {
+      height: 379px;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      .ad-left {
+        position: relative;
+        top: -309px;
+        width: 350px;
+        height: 579px;
+        overflow: hidden;
+        .bg-blue {
+          
+          background-color: #2D71B9;
+          width: 100%;
+          height: 100%;
+          opacity: 0.85;
+          // 默认
+          margin-left: -350px;
+          opacity: 0;
+        }
+        .sound {
+          position: absolute;
+          width: 225px;
+          height: 213px;
+          bottom: 0;
+          left: 0;
+          opacity: 0;
+          img {
+            width: 100%;
+          }
+        }
+        .ad-content {
+          position: absolute;
+          left: 82px;
+          top: 65px;
+          color: #fff;
+          opacity: 0;
+          >h2 {
+            font-size: 28px;
+          }
+          >div.white-line{
+            background-color: #fff;
+            width: 40px;
+            height: 4px;
+            margin: 30px 0 37px;
+          }
+          >p{
+            line-height: 54px;
+            font-size: 24px;
+            font-weight: lighter;
+          }
+        }
+      }
+      .ad-right {
+        display: flex;
+        padding-top: 78px;
+        flex: 1;
+        justify-content: space-between;
+        height: 216px;
+        .feat-single {
+          // padding-left: 20px;
+          // padding-right: 20px;
+          text-align: center;
+          width: 20%;
+          opacity: 0;
+          >p:first-of-type{
+            font-size: 16px;
+            font-family: PingFang SC;
+            font-weight: bold;
+            color: #333333;
+            line-height: 54px;
+          }
+          >p:last-of-type{
+            font-size: 14px;
+            color: #808080;
+            line-height: 24px;
+          }
+        }
+        .feat-single:not(:last-of-type) {
+          border-right: 1px solid #E0E0E0;
+        }
+      }
+    }
+  }
+
+  // culture
+  .culture {
+    background: url(../images/culture_bg.png) no-repeat center top;
+    height: 1024px;
+    .culture-box {
+      height: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+      >img {
+        position: absolute;
+      }
+      >img.culture-word {
+        top: 159px;
+        left: 50%;
+        transform: translateX(-10px);
+      }
+      >img.culture-content {
+        top: 222px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      >img.culture-right {
+        top: 358px;
+        left: 50%;
+        transform: translateX(380px);
+      }
+      >img.culture-left {
+        bottom: 103px;
+        left: 50%;
+        transform: translateX(-500px);
+      }
+
+      .culture-detail {
+        font-family: Arial, Helvetica, sans-serif;
+        position: absolute;
+        left: 185px;
+        bottom: 177px;
+        width: 350px;
+        font-size: 14px;
+        .detail-single{
+          margin-bottom: 10px;
+          span {
+            line-height: 26px;
+          }
+        }
+        .detail-last {
+          display: flex;
+          flex-wrap: nowrap;
+          p {
+            line-height: 26px;
+            font-weight: lighter;
+            color: #545454;
+          }
+        }
+        span:first-of-type{
+          font-weight: bold;
+        }
+        span:nth-of-type(2){
+          font-weight: lighter;
+          color: #545454;
+        }
+      }
+    }
+  }
+
+
+}
